@@ -1,0 +1,12 @@
+ubind @mega
+sensor current @unit @health
+sensor maximal @unit @maxHealth
+jump 11 equal current maximal
+ulocate building repair false @copper x y found building
+jump 11 equal found false
+sensor power building @totalPower
+jump 11 equal power 0
+sensor range building @range
+ucontrol approach x y range 0 0
+end
+ucontrol unbind 0 0 0 0 0
